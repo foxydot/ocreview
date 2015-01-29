@@ -149,7 +149,7 @@ function msdlab_do_social_footer(){
         $copyright .= '&copy; Copyright '.date('Y').' '.get_bloginfo('name').' &middot; All Rights Reserved ';
     }
     print '<div class="row">';
-    print '<div id="footer-left" class="footer-left col-sm-6 social">'.$address.'</div>';
+    print '<div id="footer-left" class="footer-left col-sm-6 social">'.$copyright.'</div>';
     print '<div id="footer-right" class="footer-right col-sm-6 menu">'.$footer_menu.'</div>';
     print '</div>';
 }

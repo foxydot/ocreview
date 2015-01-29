@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Volkhov:400,400italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 /*
 HTML5 Reset
 ---------------------------------------------------------------------------------------------------- */
@@ -180,42 +179,6 @@ input[type="search"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Float Clearing
---------------------------------------------- 
-
-.archive-pagination:before,
-.clearfix:before,
-.entry:before,
-.entry-pagination:before,
-.footer-widgets:before,
-.nav-primary:before,
-.nav-secondary:before,
-.site-container:before,
-.site-footer:before,
-.site-header:before,
-.site-inner:before,
-.wrap:before {
-  content: " ";
-  display: table;
-}
-
-.archive-pagination:after,
-.clearfix:after,
-.entry:after,
-.entry-pagination:after,
-.footer-widgets:after,
-.nav-primary:after,
-.nav-secondary:after,
-.site-container:after,
-.site-footer:after,
-.site-header:after,
-.site-inner:after,
-.wrap:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
-*/
 /*!
  * Bootstrap v3.0.0
  *
@@ -5520,17 +5483,13 @@ td.visible-print {
 /* Import Fonts
 ------------------------------------------------------------ */
 /* Font Stacks */
-.opensans {
+.customsansserif,
+.customsanserif {
   font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
-}
-.customsansserif {
-  font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
-}
-.customserif {
-  font-family: "Volkhov", "Georgia", serif;
-}
-.arial {
-  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
 }
 .fontawesome {
   font-family: FontAwesome;
@@ -5543,39 +5502,25 @@ td.visible-print {
 .button a,
 .button a:hover,
 .button a:visited {
-  color: white;
-  text-decoration: none;
-}
-.btn.btn-default {
+  background-color: #ff9900;
+  border-radius: 0;
   padding: 6px 24px;
   font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
-  color: #FFFFFF !important;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FFFFFF;
   font-size: 12px;
-  font-weight: 700;
-  margin: 12px auto;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  background-color: #1f96d3;
-  border: none;
-  box-shadow: none;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 6px 10px;
-  padding: 0.6rem 1rem;
+  font-weight: normal;
   text-transform: uppercase;
-  width: 100%;
-  display: inline-block;
-  border-radius: 0;
-}
-.btn.btn-default:hover,
-.button:hover {
-  background-color: #1c86bd;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: #cc7a00;
 }
 /* Clears */
-.clear {
+.msd-clearfix {
   content: ".";
   display: block;
   height: 0;
@@ -5689,6 +5634,9 @@ h4,
 h5,
 h6 {
   font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 16px;
@@ -6131,6 +6079,7 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
   background-color: #ffffff;
+  border-bottom: 1px dashed #d7d5c9;
 }
 .site-header .wrap {
   padding: 40px 0;
@@ -6144,7 +6093,7 @@ Site Header
   font-weight: 700;
   padding: 16px 0;
   padding: 1.6rem 0;
-  width: 200px;
+  width: 300px;
 }
 .header-image .title-area {
   padding: 0;
@@ -6196,7 +6145,7 @@ Site Header
 .header-image .site-title a {
   background: url(../img/logo.png) no-repeat left;
   float: left;
-  min-height: 80px;
+  min-height: 57px;
   margin: 10px;
   width: 100%;
   background-size: contain;
@@ -6208,7 +6157,7 @@ Site Header
   text-align: right;
 }
 .header-image .site-header .widget-area {
-  padding: 0;
+  padding: 2rem 0;
 }
 .site-header .search-form {
   float: right;
@@ -6222,6 +6171,10 @@ Site Navigation
   clear: both;
   color: #ffffff;
   font-family: "Open Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
   line-height: 1.5;
   width: 100%;
 }
@@ -6741,7 +6694,7 @@ Footer Widgets
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #976895;
+  background-color: #414141;
   color: #ffffff;
   font-size: 12px;
   font-size: 1.2rem;
@@ -6768,191 +6721,26 @@ Site Footer
 .site-footer p {
   margin: 0;
 }
-.banner {
-  background-color: #90c3dd;
-}
-.banner .wrap {
-  min-height: 360px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.sidebar-primary {
-  padding-left: 0;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 992px) {
-  .sidebar-primary {
-    float: left;
-    width: 25%;
-  }
-}
-.sidebar-primary .widget_advanced_menu .menu > li {
-  display: none;
-}
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-item,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-ancestor {
-  display: block;
-  border-top: 1px solid #d7d5c9;
-}
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-item a,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-ancestor a {
-  text-decoration: none;
-  font-size: 18px;
-  font-size: 1.8rem;
-  border-bottom: 0;
-  display: none;
-}
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-item li a,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-ancestor li a {
-  border-bottom: 0.5px solid #d7d5c9;
-  padding: 1rem;
-  display: block;
-  width: 100%;
-  color: #414141;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-item li a a:hover,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-ancestor li a a:hover {
-  text-decoration: none;
-  color: #976895;
-}
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-item li.current-menu-item a,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-ancestor li.current-menu-item a,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-item li:hover a,
-.sidebar-primary .widget_advanced_menu .menu > li.current-menu-ancestor li:hover a {
-  color: #976895;
-}
-.sidebar-secondary .widget {
-  background-color: #976895;
-  border: 6px solid #b695b5;
-  padding: 12px;
-}
-.sidebar-secondary .widget h4.widget-title {
-  color: #d5c3d5;
-  font-size: 2.4rem;
-  font-size: 24px;
-  margin-top: 0;
-}
-.sidebar-secondary .widget .gform_wrapper,
-.sidebar-secondary .widget .gform_footer {
-  margin: 0;
-  padding-bottom: 0;
-}
-.sidebar-secondary .widget input[type='submit'] {
-  background-color: #5b3e59;
-}
-.sidebar-secondary .widget.green {
-  background-color: #92bb3e;
-  border: 6px solid #b3d174;
-}
-.sidebar-secondary .widget.green h4.widget-title {
-  color: #d2e4ae;
-}
-.sidebar-secondary .widget.green input[type='submit'] {
-  background-color: #566e25;
-}
-.sidebar-secondary .widget.widget_product {
+.review-menu ul li a span.comment-count {
+  background-color: #ed1b26;
   color: #ffffff;
-}
-.sidebar-secondary .widget.widget_product img,
-.sidebar-secondary .widget.widget_product .product_meta,
-.sidebar-secondary .widget.widget_product .woocommerce-tabs {
-  display: none;
-}
-.sidebar-secondary .widget.widget_product .entry {
-  margin: 0;
-}
-.sidebar-secondary .widget.widget_product h1.product_title {
-  color: #d5c3d5;
-  font-size: 2.4rem;
-  font-size: 24px;
-  margin-top: 0;
-  display: none;
-}
-.sidebar-secondary .widget.widget_product input[type="submit"],
-.sidebar-secondary .widget.widget_product input[type="button"],
-.sidebar-secondary .widget.widget_product a.button,
-.sidebar-secondary .widget.widget_product button {
-  background-color: #885e86;
-  border: 0;
-  font-weight: 700;
-}
-.sidebar-secondary .widget.widget_product input[type="submit"]:hover,
-.sidebar-secondary .widget.widget_product input[type="button"]:hover,
-.sidebar-secondary .widget.widget_product a.button:hover,
-.sidebar-secondary .widget.widget_product button:hover {
-  background-color: #795377;
-}
-.site-header .wrap .header-widget-area .gform_widget {
-  width: 240px;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .widget-title {
-  background: none repeat scroll 0 0 #b37bb1;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 1.4rem;
-  margin: 0;
-  padding: 0.5rem;
+  border-radius: 0.8em;
+  float: right;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 0.4em;
+  min-width: 2.6em;
+  padding: 0.1rem 0.4rem;
   text-align: center;
-  text-transform: uppercase;
 }
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper {
-  background: #b37bb1;
-  padding: 0 1rem;
-  width: 240px;
-  display: block;
-  position: absolute;
-  z-index: 400;
-  margin: 0;
+.review-menu ul li.current_page_item > a {
+  font-weight: bold;
 }
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form {
-  font-size: 1.2rem;
-  margin-top: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 2s ease 0s;
+.review-menu ul.children {
+  margin-left: 1rem;
 }
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form input,
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form textarea {
-  color: #ffffff;
-  background: #b37bb1;
-  border: 2px solid #c69bc4;
-  padding: 0.6rem;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form ::-webkit-input-placeholder {
-  color: #ffffff;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form :-moz-placeholder {
-  /* Firefox 18- */
-  color: #ffffff;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #ffffff;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form :-ms-input-placeholder {
-  color: #ffffff;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form input[type="submit"],
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form input[type="button"],
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form a.button {
-  background: #976895;
-  border: 0;
-  font-weight: 700;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form input[type="submit"]:hover,
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form input[type="button"]:hover,
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper form a.button:hover {
-  background: #885e86;
-}
-.site-header .wrap .header-widget-area .gform_widget .widget-wrap .gform_wrapper.open_form form {
-  height: auto;
-  max-height: 1000px;
+code {
+  white-space: normal;
 }
 /*
 Responsive Nav 

@@ -2,7 +2,8 @@
 /**
  * Connected Class
  */
-class HappyHeartConnected extends MSDConnected {
+ if(class_exists('MSDConnected')){
+class FeedbackLoopConnected extends MSDConnected {
 	function widget( $args, $instance ) {
 		extract($args);
         extract($instance);
@@ -93,4 +94,5 @@ class HappyHeartConnected extends MSDConnected {
 	}
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("HappyHeartConnected");'));
+add_action('widgets_init', create_function('', 'return register_widget("FeedbackLoopConnected");'));
+}
