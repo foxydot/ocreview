@@ -5943,19 +5943,23 @@ img.alignright,
   font-size: 30px;
   font-size: 3rem;
   line-height: 1;
-  color: #1f96d3;
+  color: #ef4138;
 }
 .entry-title a,
 .sidebar .widget-title a {
-  color: #1f96d3;
+  color: #ef4138;
 }
 .entry-title a:hover {
-  color: #1876a7;
+  color: #e21c12;
+}
+.entry-subtitle {
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 .widget-title {
   font-size: 18px;
   font-size: 1.8rem;
-  color: #1f96d3;
+  color: #ef4138;
   margin-top: 1rem;
 }
 .sidebar .widget-title a {
@@ -6721,8 +6725,11 @@ Site Footer
 .site-footer p {
   margin: 0;
 }
+.review-menu {
+  padding-right: 4rem;
+}
 .review-menu ul li a span.comment-count {
-  background-color: #ed1b26;
+  background-color: #ef4138;
   color: #ffffff;
   border-radius: 0.8em;
   float: right;
@@ -6953,7 +6960,7 @@ Media Queries
     text-indent: 80px;
   }
   .nav-responsive a#pull ul#mobile_menu li.current-menu-item a {
-    background: #cbe3ef;
+    background: #f5857f;
   }
   .nav-responsive a#pull:hover {
     text-decoration: none;
