@@ -192,9 +192,8 @@ if (!class_exists('MSDReviewSystem')) {
                   if( $query->is_main_query() ) {
                     $my_post = $query->get_queried_object_id(); //hrm https://core.trac.wordpress.org/ticket/27015#comment:10
                     $my_terms = array($current_user->data->user_login);
-                    $terms = wp_get_object_terms($my_post, 'client', array('fields' => 'slugs') );
+                    $terms = wp_get_object_terms($my_post, 'client', array('fields' => 'names') );
                     $test = array_intersect($terms, $my_terms);
-                    
                     if($query->is_singular() ) {
                         if ( !empty($my_post) ){
                             if(empty( $test )){
