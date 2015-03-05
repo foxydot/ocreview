@@ -59,7 +59,7 @@ class MSDSocial{
 
 //contact information
 function get_bizname(){
-	$ret = (get_option('msdsocial_biz_name')!='')?get_option('msdsocial_biz_name'):get_bloginfo('name');
+	$ret .= (get_option('msdsocial_biz_name')!='')?get_option('msdsocial_biz_name'):get_bloginfo('name');
 	return $ret;
 }
 function get_address(){
@@ -79,7 +79,6 @@ function get_address(){
 
 function get_digits($dowrap = TRUE,$sep = " | "){
         $sepsize = count($sep);
-        $phone = $tollfree = false;
 		if((get_option('msdsocial_phone')!='') || (get_option('msdsocial_tollfree')!='') || (get_option('msdsocial_fax')!='')) {
 		    if((get_option('msdsocial_tracking_phone')!='')){
 		        if(wp_is_mobile()){
